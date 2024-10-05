@@ -8,3 +8,12 @@ const person = {
      console.log("Name: " + this.name);
      console.log("Age: "  + this.age);
      console.log("occupation: " + this.occupation);
+
+//Class named Person
+class Person {
+    constructor(name, age, occupation) {
+        this.name = name;
+        this.age = age;
+        this.occupation = occupation;
+    }
+}
