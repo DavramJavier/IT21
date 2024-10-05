@@ -24,15 +24,6 @@ class Person {
         console.log("occupation: " + this.occupation);
     }
 
-    //Solution 2: Display via HTML
-    displayViaHTML() {
-        const personElement = document.getElementById('person1'); 
-      personElement.innerHTML = `
-        <strong>Name:</strong> ${this.name}<br>
-        <strong>Age:</strong> ${this.age}<br>
-        <strong>Occupation:</strong> ${this.occupation}
-        `;
-    }
 }
  // Create an instance of Person
  const person1 = new Person("Davram A. Javier", 20, "Student");
