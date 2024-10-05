@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OOP</h1>
+    <h1 id="person1"></h1>
+
+    <script>
+        //Input and creating a class named Person
+        class Person {
+             constructor(name, age, occupation) {
+                 this.name = name;
+                 this.age = age;
+                 this.occupation = occupation;
+             }
+
+              //Solution 1: Display via console.log
+            displayInfo() { 
+                console.log("Name: " + this.name);
+                console.log("Age: "  + this.age);
+                console.log("occupation: " + this.occupation);
+            }
+
+            //Solution 2: Display via HTML
+            displayViaHTML() {
+                const personElement = document.getElementById('person1'); 
+              personElement.innerHTML = `
+                <strong>Name:</strong> ${this.name}<br>
+                <strong>Age:</strong> ${this.age}<br>
+                <strong>Occupation:</strong> ${this.occupation}
+                `;
+            }
+            }
+             // Create an instance of Person
+            const person1 = new Person("Davram A. Javier", 20, "Student");
+      
+             //Calls the method
+             person1.displayInfo();
+             person1.displayViaHTML();
+    </script>
+</body>
+</html>
