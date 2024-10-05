@@ -36,3 +36,6 @@ class Person {
 }
  // Create an instance of Person
  const person1 = new Person("Davram A. Javier", 20, "Student");
+
+ //Calls the method
+ person1.displayInfo();
