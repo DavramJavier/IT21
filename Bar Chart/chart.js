@@ -24,7 +24,7 @@ class ChartCreator {
     }
   
     createCharts() {
-    
+        // This method will be overridden in subclasses
         throw new Error('createCharts() must be implemented in subclasses');
     }
   }
@@ -45,7 +45,7 @@ class ChartCreator {
             data: {
                 labels: this.chartData.labels,
                 datasets: [{
-                    label: 'Top Waifu in anime ',
+                    label: '# of Votes',
                     data: this.chartData.data,
                     borderColor: 'rgba(75, 192, 192, 1)',
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -80,7 +80,7 @@ class ChartCreator {
             data: {
                 labels: this.chartData.labels,
                 datasets: [{
-                    label: '# of Votes',
+                    label: 'The Most Genius of all',
                     data: this.chartData.data,
                     borderWidth: 1
                 }]
@@ -96,4 +96,11 @@ class ChartCreator {
     }
   }
   
+  const lineChartCreator = new LineChart('data.json');
+  lineChartCreator.init();
   
+  const barChartCreator = new BarChart('data.json');
+  barChartCreator.init();
+  
+  console.log(lineChartCreator.dataUrl);
+  console.log(barChartCreator.dataUrl);
