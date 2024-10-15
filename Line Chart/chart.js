@@ -23,4 +23,10 @@ class ChartCreator {
         }
     }
   
-    
+    createCharts() {
+        // This method will be overridden in subclasses
+        throw new Error('createCharts() must be implemented in subclasses');
+    }
+  }
+  
+ 
