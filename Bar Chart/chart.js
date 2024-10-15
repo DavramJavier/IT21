@@ -53,4 +53,15 @@ class ChartCreator {
                     borderWidth: 2
                 }]
             },
-          
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+  }
+  
+  
